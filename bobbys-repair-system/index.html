@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login – Bobby's Motorcycle Repair System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="auth-wrap">
+  <div class="auth-card">
+    <div class="brand">
+      <div class="logo">🏍️</div>
+      <h1>Bobby's Motorcycle Repair</h1>
+      <p>Repair Management System · Gumamela, Balayan, Batangas</p>
+    </div>
+
+    <div class="tabs">
+      <button id="tabLogin" class="on" type="button">Login</button>
+      <button id="tabReg" type="button">Customer Sign Up</button>
+    </div>
+
+    <!-- LOGIN -->
+    <form id="loginForm" autocomplete="on">
+      <div id="loginErr" class="err"></div>
+      <div class="field"><label for="lu">Username</label><input id="lu" name="username" required autofocus></div>
+      <div class="field"><label for="lp">Password</label><input id="lp" name="password" type="password" required></div>
+      <button class="btn primary block" type="submit">Login</button>
+      <div class="demo">
+        <b>Default accounts</b> (change the passwords after first login):<br>
+        Owner: <code>owner</code> / <code>owner123</code><br>
+        Mechanic: <code>mechanic1</code> / <code>mech123</code>
+      </div>
+    </form>
+
+    <!-- REGISTER (customers only) -->
+    <form id="regForm" style="display:none" autocomplete="off">
+      <div id="regErr" class="err"></div>
+      <div class="field"><label>Full name *</label><input name="name" required></div>
+      <div class="grid2">
+        <div class="field"><label>Phone *</label><input name="phone" required></div>
+        <div class="field"><label>Email</label><input name="email" type="email"></div>
+      </div>
+      <div class="field"><label>Address</label><input name="address"></div>
+      <div class="grid2">
+        <div class="field"><label>Username *</label><input name="username" required></div>
+        <div class="field"><label>Password *</label><input name="password" type="password" required minlength="6"></div>
+      </div>
+      <button class="btn primary block" type="submit">Create customer account</button>
+      <p class="hint" style="text-align:center">Mechanic and owner accounts are created by the shop owner.</p>
+    </form>
+  </div>
+</div>
+<script src="js/db.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

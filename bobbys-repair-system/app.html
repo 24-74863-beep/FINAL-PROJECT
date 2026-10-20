@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bobby's Motorcycle Repair System</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><h1>🏍️ Bobby's Repair</h1><p>Repair Management System</p></div>
+    <nav class="nav" id="nav"></nav>
+    <div class="me" id="me"></div>
+  </aside>
+  <div class="main">
+    <header class="topbar">
+      <button class="btn menu-btn" id="menuBtn" type="button">☰</button>
+      <h2 id="pageTitle"></h2>
+      <button class="btn sm" id="pwBtn" type="button">Change password</button>
+      <button class="btn sm danger" id="logoutBtn" type="button">Logout</button>
+    </header>
+    <main class="content" id="content"></main>
+  </div>
+</div>
+<div id="modal"></div>
+<div id="toast"></div>
+<script src="js/db.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
